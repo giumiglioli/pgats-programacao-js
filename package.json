@@ -4,15 +4,13 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "mocha ./testes/*.js --reporter spec > resultados.txt",
-    "test2": "mocha ./testes/*.js --reporter mochawesome"
+    "test": "mocha ./testes/*.js --reporter spec > resultados.txt"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "mocha": "^11.2.2",
-    "mochawesome": "^7.1.3"
+    "mocha": "^11.2.2"
   }
 }
