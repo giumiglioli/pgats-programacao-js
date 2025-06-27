@@ -31,4 +31,9 @@ jobs:
       # Executar os testes
       - name: Executando Testes
         run: npm test
-        
+      
+      - name: Criar relatório dos testes
+        uses: actions/upload-artifact@v4
+        with:
+          name: resultado-do-teste
+          path: resultados.txt
