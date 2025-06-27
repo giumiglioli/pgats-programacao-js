@@ -1,0 +1,33 @@
+# CI de Nível 01 - Disparo manual a partir de 1 clique
+
+# Nome do nosso 'pipeline'
+name: 'CI Trabalho Final'
+
+on:
+  workflow_dispatch:
+
+# Trabalhos/tarefas dentro do pipeline = jobs
+jobs:
+  e2e-tests:
+    # Máquina que o job vai executar
+    runs-on: ubuntu-latest
+
+    # Passos do script de build
+    steps:
+      # Clone o repositorio do projeto
+      - name: Clone repositorio
+        uses: actions/checkout@v4
+
+      # Instalação do Node
+      - name: Instalacao Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.x
+
+      # Instalação das dependências
+      - name: Instalando dependências
+        run: npm install 
+
+      # Executar os testes
+      - name: Executando Testes
+        run: npm test
